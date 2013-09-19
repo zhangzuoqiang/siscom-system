@@ -26,7 +26,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>br.com.siscom.sysnorte.App.Main</mainClass>
+							<mainClass>br.com.siscom.sysnorte.app.Main</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
@@ -40,7 +40,7 @@
 				<executions>
 					<execution>
 						<configuration>
-							<mainClass>br.com.siscom.sysnorte.App.Main</mainClass>
+							<mainClass>br.com.siscom.sysnorte.app.Main</mainClass>
 						</configuration>
 						<goals>
 							<goal>one-jar</goal>
