@@ -28,11 +28,11 @@ public class Customer extends Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @Column(length = 100, nullable = false)
+    @Column(length = 100)
     private String full_name;
-    @Column(length = 10, nullable = false)
+    @Column(length = 10)
     private String type_of_document;
-    @Column(length = 25, nullable = false)
+    @Column(length = 25)
     private String document;
     @Column(length = 25)
     private String ie;
@@ -43,35 +43,28 @@ public class Customer extends Person {
     private String email_main;
     @Column(length = 50)
     private String email;
-    @Column(length = 50, nullable = false)
+    @Column(length = 50)
     private String address;
     @Column(length = 10)
     private String number;
     @Column(length = 20)
     private String complement;
-    @Column(length = 20, nullable = false)
+    @Column(length = 20)
     private String district;
-    @Column(length = 15, nullable = false)
-    private String cep;  
-    @Column(nullable = false)
+    @Column(length = 15)
+    private String cep;    
     private int country;
-    @Column(nullable = false)
     private int uf;
-    @Column(length = 50, nullable = false)
+    @Column(length = 50)
     private String city;
     @Column(length = 20)
     private String phone_main;
     @Column(length = 20)
     private String phone;
-    @Column(nullable = false)
     private DateTime created_at;
-    @Column(nullable = false)
     private DateTime update_at;
-    @Column(nullable = false)
     private boolean inactive;
-    @Column(nullable = false)
     private DateTime inactive_at;
-    @Column(nullable = false)
     private Double limit_of_credit;
 
     public Long getId() {
