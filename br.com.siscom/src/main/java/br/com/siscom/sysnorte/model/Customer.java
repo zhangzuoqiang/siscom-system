@@ -66,6 +66,7 @@ public class Customer extends Person {
     private boolean inactive;
     private DateTime inactive_at;
     private Double limit_of_credit;
+    
 
     public Long getId() {
         return id;
