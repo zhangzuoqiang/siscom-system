@@ -37,8 +37,8 @@
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="org.postgresql.Driver"/>
         <property name="url" value="jdbc:postgresql://localhost:5432/siscomdb"/>
-        <property name="username" value="postgres"/>
-        <property name="password" value="a1s2 d3f4&amp;beguta $%()"/>
+        <property name="username" value="siscom"/>
+        <property name="password" value="p@ssw0rd"/>
     </bean>
     
     <!-- Ativa a criacao dos repositorios no Spring Data JPA -->
