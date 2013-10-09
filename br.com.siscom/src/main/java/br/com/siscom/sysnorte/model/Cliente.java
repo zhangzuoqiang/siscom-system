@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Version;
 
 import org.joda.time.DateTime;
@@ -73,12 +75,15 @@ public class Cliente implements Serializable {
 	@Column(length = 20)
 	private String telefone;
 	
+	@Temporal(TemporalType.DATE)
 	private DateTime criado_em;
 	
+	@Temporal(TemporalType.DATE)
 	private DateTime editado_em;
 	
 	private boolean inativo;
 	
+	@Temporal(TemporalType.DATE)
 	private DateTime inativo_em;
 	
 	private BigDecimal limite_de_credito;
