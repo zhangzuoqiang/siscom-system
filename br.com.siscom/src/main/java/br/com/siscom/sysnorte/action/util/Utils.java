@@ -21,6 +21,5 @@ public class Utils {
         } catch (ParseException ex) {
             Logger.getLogger(Utils.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-    
+    }    
 }
