@@ -42,7 +42,5 @@
     </bean>
     
     <!-- Ativa a criacao dos repositorios no Spring Data JPA -->
-    <jpa:repositories base-package="br.com.siscom.sysnorte.dao" />
-
-    
+    <jpa:repositories base-package="br.com.siscom.sysnorte.dao" />   
 </beans>

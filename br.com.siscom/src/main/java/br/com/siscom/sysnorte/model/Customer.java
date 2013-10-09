@@ -26,47 +26,44 @@ public class Customer extends Person {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
+    private Long id;    
     @Column(length = 100)
-    private String full_name;
+    private String nome;
     @Column(length = 10)
-    private String type_of_document;
+    private String tipo_de_documento;
     @Column(length = 25)
-    private String document;
+    private String documento;
     @Column(length = 25)
     private String ie;
     @Column(length = 25)
-    private String ie_of_SUFRAMA;
-    private boolean free_of_ICMS;
+    private String ie_SUFRAMA;
+    private boolean isento_ICMS;
     @Column(length = 50)
-    private String email_main;
+    private String email_principal;
     @Column(length = 50)
-    private String email;
+    private String email_secundario;
     @Column(length = 50)
-    private String address;
+    private String endereco;
     @Column(length = 10)
-    private String number;
+    private String numero;
     @Column(length = 20)
-    private String complement;
+    private String complemento;
     @Column(length = 20)
-    private String district;
+    private String bairro;
     @Column(length = 15)
     private String cep;    
-    private int country;
+    private int pais;
     private int uf;
-    @Column(length = 50)
-    private String city;
+    private int city;
     @Column(length = 20)
-    private String phone_main;
+    private String telefone_principal;
     @Column(length = 20)
-    private String phone;
-    private DateTime created_at;
-    private DateTime update_at;
-    private boolean inactive;
-    private DateTime inactive_at;
-    private Double limit_of_credit;
-    
+    private String telefone;
+    private DateTime criado_em;
+    private DateTime editado_em;
+    private boolean inativo;
+    private DateTime inativo_em;
+    private Double limite_de_credito;
 
     public Long getId() {
         return id;
@@ -76,28 +73,28 @@ public class Customer extends Person {
         this.id = id;
     }
 
-    public String getFull_name() {
-        return full_name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setFull_name(String full_name) {
-        this.full_name = full_name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getType_of_document() {
-        return type_of_document;
+    public String getTipo_de_documento() {
+        return tipo_de_documento;
     }
 
-    public void setType_of_document(String type_of_document) {
-        this.type_of_document = type_of_document;
+    public void setTipo_de_documento(String tipo_de_documento) {
+        this.tipo_de_documento = tipo_de_documento;
     }
 
-    public String getDocument() {
-        return document;
+    public String getDocumento() {
+        return documento;
     }
 
-    public void setDocument(String document) {
-        this.document = document;
+    public void setDocumento(String documento) {
+        this.documento = documento;
     }
 
     public String getIe() {
@@ -108,68 +105,68 @@ public class Customer extends Person {
         this.ie = ie;
     }
 
-    public String getIe_of_SUFRAMA() {
-        return ie_of_SUFRAMA;
+    public String getIe_SUFRAMA() {
+        return ie_SUFRAMA;
     }
 
-    public void setIe_of_SUFRAMA(String ie_of_SUFRAMA) {
-        this.ie_of_SUFRAMA = ie_of_SUFRAMA;
+    public void setIe_SUFRAMA(String ie_SUFRAMA) {
+        this.ie_SUFRAMA = ie_SUFRAMA;
     }
 
-    public boolean isFree_of_ICMS() {
-        return free_of_ICMS;
+    public boolean isIsento_ICMS() {
+        return isento_ICMS;
     }
 
-    public void setFree_of_ICMS(boolean free_of_ICMS) {
-        this.free_of_ICMS = free_of_ICMS;
+    public void setIsento_ICMS(boolean isento_ICMS) {
+        this.isento_ICMS = isento_ICMS;
     }
 
-    public String getEmail_main() {
-        return email_main;
+    public String getEmail_principal() {
+        return email_principal;
     }
 
-    public void setEmail_main(String email_main) {
-        this.email_main = email_main;
+    public void setEmail_principal(String email_principal) {
+        this.email_principal = email_principal;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEmail_secundario() {
+        return email_secundario;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmail_secundario(String email_secundario) {
+        this.email_secundario = email_secundario;
     }
 
-    public String getAddress() {
-        return address;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
-    public String getNumber() {
-        return number;
+    public String getNumero() {
+        return numero;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 
-    public String getComplement() {
-        return complement;
+    public String getComplemento() {
+        return complemento;
     }
 
-    public void setComplement(String complement) {
-        this.complement = complement;
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
     }
 
-    public String getDistrict() {
-        return district;
+    public String getBairro() {
+        return bairro;
     }
 
-    public void setDistrict(String district) {
-        this.district = district;
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
     }
 
     public String getCep() {
@@ -180,12 +177,12 @@ public class Customer extends Person {
         this.cep = cep;
     }
 
-    public int getCountry() {
-        return country;
+    public int getPais() {
+        return pais;
     }
 
-    public void setCountry(int country) {
-        this.country = country;
+    public void setPais(int pais) {
+        this.pais = pais;
     }
 
     public int getUf() {
@@ -196,67 +193,67 @@ public class Customer extends Person {
         this.uf = uf;
     }
 
-    public String getCity() {
+    public int getCity() {
         return city;
     }
 
-    public void setCity(String city) {
+    public void setCity(int city) {
         this.city = city;
     }
 
-    public String getPhone_main() {
-        return phone_main;
+    public String getTelefone_principal() {
+        return telefone_principal;
     }
 
-    public void setPhone_main(String phone_main) {
-        this.phone_main = phone_main;
+    public void setTelefone_principal(String telefone_principal) {
+        this.telefone_principal = telefone_principal;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
-    public DateTime getCreated_at() {
-        return created_at;
+    public DateTime getCriado_em() {
+        return criado_em;
     }
 
-    public void setCreated_at(DateTime created_at) {
-        this.created_at = created_at;
+    public void setCriado_em(DateTime criado_em) {
+        this.criado_em = criado_em;
     }
 
-    public DateTime getUpdate_at() {
-        return update_at;
+    public DateTime getEditado_em() {
+        return editado_em;
     }
 
-    public void setUpdate_at(DateTime update_at) {
-        this.update_at = update_at;
+    public void setEditado_em(DateTime editado_em) {
+        this.editado_em = editado_em;
     }
 
-    public boolean isInactive() {
-        return inactive;
+    public boolean isInativo() {
+        return inativo;
     }
 
-    public void setInactive(boolean inactive) {
-        this.inactive = inactive;
+    public void setInativo(boolean inativo) {
+        this.inativo = inativo;
     }
 
-    public DateTime getInactive_at() {
-        return inactive_at;
+    public DateTime getInativo_em() {
+        return inativo_em;
     }
 
-    public void setInactive_at(DateTime inactive_at) {
-        this.inactive_at = inactive_at;
+    public void setInativo_em(DateTime inativo_em) {
+        this.inativo_em = inativo_em;
     }
 
-    public Double getLimit_of_credit() {
-        return limit_of_credit;
+    public Double getLimite_de_credito() {
+        return limite_de_credito;
     }
 
-    public void setLimit_of_credit(Double limit_of_credit) {
-        this.limit_of_credit = limit_of_credit;
+    public void setLimite_de_credito(Double limite_de_credito) {
+        this.limite_de_credito = limite_de_credito;
     }
 }
