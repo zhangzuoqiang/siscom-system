@@ -16,21 +16,21 @@ import org.springframework.data.jpa.domain.AbstractPersistable;
 /**
  * Classe de modelo que representa uma mercadoria.
  * 
- * <p>A <code>mercadoria</code> é um objeto persistido no banco de dados, por isso a classificamos como <strong>Entidade</strong>.</p>
+ * <p>A <code>mercadoria</code> ï¿½ um objeto persistido no banco de dados, por isso a classificamos como <strong>Entidade</strong>.</p>
  * 
- * <p>Por se tratar de uma Entidade persistente, a <code>Mercadoria</code> utiliza as anotações <code>JPA</code> para definir o mapeamento <code>ORM</code>.
+ * <p>Por se tratar de uma Entidade persistente, a <code>Mercadoria</code> utiliza as anotaï¿½ï¿½es <code>JPA</code> para definir o mapeamento <code>ORM</code>.
  * 
  * <p>As funcionalidades desse sistema demonstraÃ§Ã£o sÃ£o concentradas no cadastro (CRUD) de mercadorias.</p>
  * 
  * <p>
- *  A classe <code>AbstractPersistable</code> (Spring Data JPA) define uma estrutura com ID da entidade, método equals e hashcode.
+ *  A classe <code>AbstractPersistable</code> (Spring Data JPA) define uma estrutura com ID da entidade, mï¿½todo equals e hashcode.
  *  O objetivo em <i>enxugar</i> o mapeamento JPA. 
  * </p>
  * 
  * <p>
- *  Outra característica dessa classe, é o uso de anotações do Bean Validations para validar o estado (dados) da <code>Mercadoria</code>.
- *  Bean Validations (JSR 303) é uma especificação Java para habilitar a validação de dados via o uso de anotações. O principal provider
- *  dessa API é o <code>Hibernate Validator</code>.
+ *  Outra caracterï¿½stica dessa classe, ï¿½ o uso de anotaï¿½ï¿½es do Bean Validations para validar o estado (dados) da <code>Mercadoria</code>.
+ *  Bean Validations (JSR 303) ï¿½ uma especificaï¿½ï¿½o Java para habilitar a validaï¿½ï¿½o de dados via o uso de anotaï¿½ï¿½es. O principal provider
+ *  dessa API ï¿½ o <code>Hibernate Validator</code>.
  * </p>
  * 
  * @author YaW Tecnologia
@@ -38,7 +38,9 @@ import org.springframework.data.jpa.domain.AbstractPersistable;
 @Entity
 @Table(name="mercadoria")
 public class Mercadoria extends AbstractPersistable<Integer> {
-	
+
+	private static final long serialVersionUID = 7045647307897099942L;
+
 	@NotNull @Size(min=5, max=200)
 	private String nome;
 	

@@ -12,7 +12,7 @@ import org.joda.time.DateTime;
 @Entity
 @Table(name = "PERSONS_CUSTOMERS")
 @DiscriminatorValue("2")
-public class Customer extends Person {
+public class Customer {
 
     private static long serialVersionUID = -4133580183371647600L;
 
